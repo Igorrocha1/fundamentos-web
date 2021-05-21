@@ -2,22 +2,23 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatos</title>
     <link rel="stylesheet" href="asstes/css/style.css">
 </head>
 <body>
     <ul id="menu">
-        <li><a href="index.html">Home</a></li>
-    </ul>
+        <li>
+           <a href="index.html"> Home </a>
+        </li>
+     </ul>
 
     <h1 class="center">Algumas de minhas redes:</h1>
     <div class="center">
         <a href="https://www.linkedin.com/in/igorrocha1/" target="_blank">
-        <img class="tm-socialp" src="assets/linkedin.png" alt="logo do Linkedin"></a>
+        <img class="tm-socialp" src="asstes/img/linkedin.png" alt="logo do Linkedin"></a>
         <a href="https://github.com/Igorrocha1" target="_blank">
-        <img class="tm-socialp" src="assets/github.png" alt="logo do github">
+        <img class="tm-socialp" src="asstes/img/github.png" alt="logo do github">
     </a>
     </div>
     
@@ -26,18 +27,19 @@
             <h2 >Mande uma mensagem:</h2>
                 <form>
                     <label for="nome">Nome:</label> <br>
-                    <input type="text" id="nome">
-                    <br>
+                    <input type="text" id="nome" onkeyup="validaNome()">
+                    <div id='txtNome'></div>
                     <br>
                     <label for="email">E-mail:</label> <br>
-                    <input type="email" id="email">
-                    <br>
+                    <input type="email" id="email" onkeyup="validaEmail()">
+                    <div id='txtEmail'></div>
                     <br>
                     <label for="assunto">Assunto:</label> <br>
-                    <textarea name="assunto" id="assunto" cols="30" rows="5"></textarea>
+                    <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+                    <div id='txtAssunto'></div>
                     <br>
                     <br>
-                    <button>Enviar</button>
+                    <button onclick="enviar()">Enviar</button>
                 </form>
         </div>
             <div class="ml-50">  
@@ -45,7 +47,7 @@
             <p>Baggot Street Lower, 87</p>
             <p>Dublim, IE</p>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.4662716233706!2d-6.246288421480597!3d53.33490910766437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670ebd9290981b%3A0x9f7b1410a278a4e6!2sBaggot%20Street%20Lower%2C%20Dublin%2C%20Irlanda!5e0!3m2!1spt-BR!2sbr!4v1621457028763!5m2!1spt-BR!2sbr" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.4662716233706!2d-6.246288421480597!3d53.33490910766437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670ebd9290981b%3A0x9f7b1410a278a4e6!2sBaggot%20Street%20Lower%2C%20Dublin%2C%20Irlanda!5e0!3m2!1spt-BR!2sbr!4v1621457028763!5m2!1spt-BR!2sbr" width="400" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id='mapa'>
             </iframe>
             </div>
             
@@ -62,6 +64,8 @@
                     <h6> Criado e desenvolvido por Igor Rocha.</h6>
                     </p>
                 </div>
-    </footer>   
+    </footer>  
+    
+    <script src="asstes/js/script.js"></script>
 </body>
 </html>

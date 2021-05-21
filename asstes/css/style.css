@@ -8,11 +8,19 @@
     text-align: center;
 }
 
+.esquerda{
+    text-align: center;
+}
+
 .container{
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
+}
+#bg li{
+    display: inline;
+    margin: 2px;
 }
 
 #menu li{
